@@ -1,0 +1,161 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<style>
+  .hide {
+    display: none !important;
+  }
+</style>
+<body>
+<%- include('header'); -%>
+<link href="/css/adminp.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<div class="overflow-x-auto">
+    <table class="table table-zebra w-full">
+        <!-- head -->
+        <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>City</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i = 0; i < allUsers.length; i++) { %>
+            <tr>
+                <th><%= i + 1 %></th>
+                <td><%= allUsers[i].name %></td>
+                <td><%= allUsers[i].email %></td>
+                <td><%= allUsers[i].password %></td>
+                <td><%= allUsers[i]?.city %></td>
+                <td style="display: flex;flex-direction: row;">
+                    <form action="/deleteUser" method="post">
+                        <button name="id" value="<%= allUsers[i]._id %>" class="btn btn-primary">Delete user</button>
+                    </form>
+                    <label for="my-modal-3">
+                        <button class="btn btn-ghost editLabels" value="<%= allUsers[i]._id %>" onclick="show(this)">Edit</button>
+                    </label>
+
+                </td>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+</div>
+<div style="position: absolute;right: 30px;width: 500px;" class="modal1 hide">
+    <div class="modal-box relative">
+        <button class="btn btn-ghost" onclick="closeIt()">X</button>
+        <form action="/updateNewData" method="POST">
+            <input type="text" class="hide" name="id" id="id2" value="">
+            <div class="container">
+                <div>
+                    <label for="name">Name</label>
+                    <input
+                            class="input input-bordered input-success w-full" type="text" id="name2"
+                            name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input
+                            class="input input-bordered input-success w-full" type="email" id="email2"
+                            name="email"
+                            required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input
+                            class="input input-bordered input-success w-full" type="text" id="city2"
+                            name="city">
+                </div>
+                <br>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<p>Sort by</p>
+<div class="btn-group">
+    <form action="/adminPanel" method="post">
+        <button class="btn btn-active" name="sortOption" value="name">name</button>
+        <button class="btn" name="sortOption" value="email">email</button>
+        <button class="btn" name="sortOption" value="city">city</button>
+    </form>
+</div>
+<label for="my-modal" class="btn modal-button">Add new user</label>
+<input type="checkbox" id="my-modal-3" class="modal-toggle"/>
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my-modal" class="modal-toggle"/>
+<div class="modal">
+    <div class="modal-box">
+        <div class="modal-action">
+            <label for="my-modal" class="btn btn-ghost">x</label>
+        </div>
+        <h3 class="font-bold text-lg">Register User</h3>
+        <form action="/addNewUser" method="POST">
+            <div class="container">
+                <div>
+                    <label for="name">Name</label>
+                    <input class="input input-bordered input-success w-full" type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input class="input input-bordered input-success w-full" type="email" id="email" name="email"
+                           required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input class="input input-bordered input-success w-full" type="password" id="password"
+                           name="password" required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input class="input input-bordered input-success w-full" type="text" id="city" name="city">
+                </div>
+                <br>
+                <button class="btn">Register</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+  let allUsersJS = '<%- JSON.stringify(allUsers) %>'
+  const id2 = document.querySelector('#id2')
+  const name2 = document.querySelector('#name2')
+  const email2 = document.querySelector('#email2')
+  const city2 = document.querySelector('#city2')
+  const editLabels = document.querySelector('.editLabels')
+  const modal1 = document.querySelector('.modal1')
+  function closeIt() {
+    modal1.classList.toggle('hide')
+  }
+  const show = (id) => {
+    console.log(id.value)
+    console.log(JSON.parse(allUsersJS))
+    const concreteUser = JSON.parse(allUsersJS).find(allUser => {
+      if (String(allUser._id) == String(id.value)){
+        return true
+      }
+      return false
+    })
+    id2.value = concreteUser._id
+    name2.value = concreteUser.name
+    email2.value = concreteUser.email
+    city2.value = concreteUser.city
+    modal1.classList.toggle('hide')
+
+  }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

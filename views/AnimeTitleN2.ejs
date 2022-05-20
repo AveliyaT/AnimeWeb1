@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8">
+<title> Anime2 </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="/css/styles3.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<%- include('header'); -%>
+<div class="inf">
+<h1>One Piece</h1>
+<img onclick="soundClick()" src="/mtrls/onepiecelogo.png" width="800" height="450" alt="onepiecelogo">
+<h2><em>In Common</em></h2>
+<h3><p>Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey D. Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy's reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece.</p></h3>
+<h2><em>Storyline</em></h2>
+<h3><p><strong>The storyline</strong> of <em>One Piece</em> — is commonly divided into individual story arcs for easier understanding. While the exact divisions are somewhat fluid, it is generally understood that an arc begins when the Straw Hat Pirates land on a specific island, and ends when they leave. 
+Mugiwara Pirates, Straw Hat Crew or simply the Straw Hats, are an infamous and incredibly powerful rising pirate crew and they have various members from different areas. </p></h3>
+<h3><p>The main crew consists of Captain Monkey.D. Luffy, great swordsman Roronoa Zoro, navigator Nami, gunner Usopp, cook Sanji, healer Tony Chopper, archeology historian Nico Robin, mechanic Frankie, musician Brooke, helmsman Jimbay and their friend the princess of the Alabasta Kingdom, Nefritari Vivi.</p></h3>
+<h2>Useful Links</h2>
+<a class="btn btn-info btn-lg btn-block" role="button" href="https://onepiece.fandom.com/wiki/One_Piece_Wiki" target="_blank">One Piece's Wiki</a>
+<a class="btn btn-info btn-lg btn-block" role="button" href="https://gogoanime.lol/one-piece-episode-1" target="_blank">Watch One Piece</a>
+<a class="btn btn-info btn-lg btn-block" role="button" href="https://mangaplus.shueisha.co.jp/viewer/1000486" target="_blank">Read manga One Piece</a>
+<a class="btn btn-info btn-lg btn-block" role="button" href="/">BACK <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+  <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/>
+</svg></a>
+</div>
+<script>
+  function soundClick() {
+    var audio = new Audio(); 
+    audio.src = 'mtrls/op.mp3'; 
+    audio.autoplay = true; 
+  }
+  
+  </script>
+</body>
+</html>

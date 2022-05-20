@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<%- include('header'); -%>
+<link href="/css/forregist.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<style>
+    body{
+        background: grey;
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        object-position: center;
+    }
+
+    button{
+        font-size: 40px;
+        border-radius: 10px;
+    }
+    input{
+        font-size: 35px;
+        border-radius: 5px;
+    }
+</style>
+
+<form action="/register" method="POST">
+<div class="container">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required> <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"-->
+
+    </div>
+    <h6 class="txtt" style="color: red">"Your password needs a lower case and an uppercase letter"</h6>
+    <h6 class="txtt" style="color: red">"Your password needs a number / length more than 7"</h6>
+    <h6 class="txtt" style="color: red"> "Your password needs at least 1 special character"</h6>
+    <div>
+        <label for="city"> City </label>
+        <input type="text" id="city" name="city" >
+    </div><br>
+    <button type="submit" id="btn-1">Register</button>
+
+</div>
+
+</form>
+
+<a href="/login" style="color:black; font-size: 35px; padding: 35px;">Login</a>

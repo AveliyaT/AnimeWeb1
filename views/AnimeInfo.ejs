@@ -1,0 +1,51 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> AnimeInfo! </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="public/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+
+  <div class="infa"><h1>Welcome to the AnimeInfo!</h1>
+<img onclick="soundClick()" src="/mtrls/white1.png" alt="logo">
+<h3>In this site you can find actual information about your lovely anime/manga/ranobe and other entertaimens.</h3>
+
+<h3>List of Titles:</h3>
+
+<a class="btn btn-dark btn-lg" href="/t1" role="button" target="_blank">Jojo's Bizzare Adventures</a>
+<a class="btn btn-dark btn-lg" href="/t2" role="button" target="_blank">One Piece</a>
+<a class="btn btn-dark btn-lg" href="/t3" role="button" target="_blank">Monogatari Series</a>
+
+<h3>Created by Aliya Temirbolat</h3>
+      <div class="container">
+        <p>My ListViewer Anime</p>
+        <form id="search_form">
+            <div class="form-group">
+                <label for="search">
+                    Recherche
+                </label>
+                <input type="text" placeholder="Entere un now de manga" name="search" id="search">
+            </div>
+        </form>
+
+      </div>
+</div>
+<script>
+  function soundClick() {
+    var audio = new Audio(); 
+    audio.src = 'mtrls/AnimeInfo.mp3'; 
+    audio.autoplay = true; 
+  }
+  
+  </script>
+
+</head>
+</html>

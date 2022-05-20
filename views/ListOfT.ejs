@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> AnimeInfo! </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="/css/styles6.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<%- include('header'); -%>
+<div class="vse">
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search..." title="Write the tittle name">
+    <div class = "ttl">
+        <ul id="myMenu">
+            <li><button class="btn btn-dark btn-lg"  id="btn1">Monogatari</button></li>
+            <div class="inf" id="inf1"><p>The story is about Koyomi Araragi, a former vampire and high school student. One day, while walking down the stairs at school, his shy but beautiful classmate Hitagi Senjogahara fell on him from somewhere above. Koyomi, instinctively tensed up, prepared to take the considerable weight in his arms, and was surprised to find that the girl, in violation of all the laws of physics is almost weightless. He soon became acquainted with Hitaga's abrupt temper, who did not want her strange secret to be known to anyone. Despite insults and threats from her, Koyomi introduces her to his friend, Mame Oshino, who not long ago helped him transform from a vampire back into a human.
+                </p>
+                <a class="btn btn-secondary" href="/t3" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide1">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn2">JoJo's Bizzare Adventures</button></li>
+            <div class="inf" id="inf2"><p> The story of the Joestar family, starting with Jonathan, a mild mannered Englishman who strikes up a rivalry with Dio Brando, his adopted brother. </p>
+                <a class="btn btn-secondary" href="/t1" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide2">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn3">One Piece</button></li>
+            <div class="inf" id="inf3"><p> Gol D. Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world.</p>
+                <a class="btn btn-secondary" href="/t2" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide3">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn5">Host Club Ouran</button></li>
+            <div class="inf" id="inf5"><p>The comedic series revolves around the escapades of Haruhi Fujioka, a scholarship student at the prestigious Ouran Academy, a fictitious school for rich kids located in Bunkyo, Tokyo. Looking for a quiet place to study, Haruhi stumbles upon the abandoned Third Music Room, a place where the Ouran Academy Host Club, a group of six male students, gathers to entertain female "clients" with sweets and tea. During their initial encounter, Haruhi accidentally destroys an antique vase valued at ¥8,000,000 (around US$80,000) and must work off the debt as the club's errand boy.
+                </p>
+                <a class="btn btn-secondary" href="/t5" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide5">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn4">Cowboy Bebop</button></li>
+            <div class="inf" id="inf4"><p>Cowboy Bebop has gained widespread critical and commercial success both in Japan and internationally. The series has won numerous awards in the field of animation and science fiction and has been recognized for its style, characters, plot, dubbing, animation, and soundtrack. Over the years the series has unfolded as a masterpiece of Japanese animation, and many critics consider it one of the best anime of all time.
+                </p>
+                <a class="btn btn-secondary" href="/t4" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide4">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn6">Fullmetal Alchemist</button></li>
+            <div class="inf" id="inf6"><p>After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor.
+                </p>
+                <a class="btn btn-secondary" href="/t6" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide6">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn7">Demon Slayer</button></li>
+            <div class="inf" id="inf7"><p>Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.
+                </p>
+                <a class="btn btn-secondary" href="/t7" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide7">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn8">Link Click</button></li>
+            <div class="inf" id="inf8"><p>Using superpowers to enter their clientele's photos one by one, Cheng Xiaoshi and Lu Guang take their work seriously at "Time Photo Studio," a small photography shop set in the backdrop of a modern metropolis. Each job can be full of danger, but nothing is more important than fulfilling every order, no matter the scale…or peril involved!
+                </p>
+                <a class="btn btn-secondary" href="/t8" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide8">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn9">Naruto</button></li>
+            <div class="inf" id="inf9"><p>Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.
+                </p>
+                <a class="btn btn-secondary" href="/t9" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide9">hide</button></div>
+
+            <li><button class="btn btn-dark btn-lg"  id="btn10">One Punch Man</button></li>
+            <div class="inf" id="inf10"><p>The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, Saitama relentlessly trained for three years, losing all of his hair in the process. Now, Saitama is so powerful, he can defeat any enemy with just one punch. However, having no one capable of matching his strength has led Saitama to an unexpected problem—he is no longer able to enjoy the thrill of battling and has become quite bored.
+                </p>
+                <a class="btn btn-secondary" href="/t10" role="button">know more...</a>
+                <button class="btn btn-secondary" id="hide10">hide</button></div>
+        </ul>
+    </div>
+</div>
+</div>
+<script src="/js/scriptLOT.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $("#inf1").css("display", "none");
+    $("#inf2").css("display", "none");
+    $("#inf3").css("display", "none");
+    $("#inf4").css("display", "none");
+    $("#inf5").css("display", "none");
+    $("#inf6").css("display", "none");
+    $("#inf7").css("display", "none");
+    $("#inf8").css("display", "none");
+    $("#inf9").css("display", "none");
+    $("#inf10").css("display", "none");
+
+    $('#btn1').click(function(){
+        $("#inf1").css("display", "block");
+    });
+    $('#hide1').click(function(){
+        $("#inf1").css("display", "none");
+    });
+
+    $('#btn2').click(function(){
+        $("#inf2").css("display", "block");
+    });
+    $('#hide2').click(function(){
+        $("#inf2").css("display", "none");
+    });
+
+    $('#btn3').click(function(){
+        $("#inf3").css("display", "block");
+    });
+    $('#hide3').click(function(){
+        $("#inf3").css("display", "none");
+    });
+
+    $('#btn4').click(function(){
+        $("#inf4").css("display", "block");
+    });
+    $('#hide4').click(function(){
+        $("#inf4").css("display", "none");
+    });
+
+    $('#btn5').click(function(){
+        $("#inf5").css("display", "block");
+    });
+    $('#hide5').click(function(){
+        $("#inf5").css("display", "none");
+    });
+
+    $('#btn6').click(function(){
+        $("#inf6").css("display", "block");
+    });
+    $('#hide6').click(function(){
+        $("#inf6").css("display", "none");
+    });
+
+    $('#btn7').click(function(){
+        $("#inf7").css("display", "block");
+    });
+    $('#hide7').click(function(){
+        $("#inf7").css("display", "none");
+    });
+
+    $('#btn8').click(function(){
+        $("#inf8").css("display", "block");
+    });
+    $('#hide8').click(function(){
+        $("#inf8").css("display", "none");
+    });
+
+    $('#btn9').click(function(){
+        $("#inf9").css("display", "block");
+    });
+    $('#hide9').click(function(){
+        $("#inf9").css("display", "none");
+    });
+
+    $('#btn10').click(function(){
+        $("#inf10").css("display", "block");
+    });
+    $('#hide10').click(function(){
+        $("#inf10").css("display", "none");
+    });
+
+</script>
+</body>
+</html>

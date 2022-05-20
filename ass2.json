@@ -1,0 +1,51 @@
+[
+  {
+    "employee": {
+      "name": "Arsen"},
+    "addr": {
+        "country": "Kazakhstan",
+        "city": "Astana"
+      },
+    "position": {
+        "name": "programmer",
+        "salary": 1000
+      }
+    },
+  {
+    "employee": {
+      "name": "Amir" },
+    "addr": {
+        "country": "Kazakhstan",
+        "city": "Almaty"
+      },
+    "position": {
+        "name": "programmer",
+        "salary": 1000
+      }
+
+  },
+  {
+    "employee": {
+      "name": "Eric"},
+    "addr": {
+        "country": "Britain",
+        "city": "Manchester"
+      },
+    "position": {
+        "country": "Kazakhstan",
+        "city": "Almaty"
+      }
+    },
+  {
+    "employee": {
+      "name": "Azat"},
+    "addr": {
+        "country": "Kazakhstan",
+        "city": "Astana"
+      },
+    "position": {
+        "name": "programmer",
+        "salary": 2000
+      }
+    }
+]

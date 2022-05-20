@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html> 
+<body>
+<meta charset="utf-8">
+<title> Anime1 </title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="/css/styles2.css" rel="stylesheet" type="text/css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <%- include('header'); -%>
+<div class="inf">
+<h1 onclick="soundClick()"> Jojo's Bizzare Adventures </h1>
+<img src="/mtrls/JojoImage2.png" onclick="soundClick()" alt="jjba logo2">
+<h3><p>JoJo was serialized in Weekly Shōnen Jump from 1987 until 2004, when it then transferred to the monthly seinen magazine <em>Ultra Jump</em>, where the story continues.</p>
+
+<p>The series has over 100 million copies in print, making it one of the best-selling manga series in history. Filling over <strong>120 volumes</strong>, it is Shueisha's second
+ longest-running manga series. Publication in English of the earlier parts of the series is ongoing.</p></h3>
+
+<div class="strln"><h2><em>JoJo's genre spans Action, Adventure, Supernatural, Thriller, Comedy, Tragedy, Mystery, and Horror.</em></h2></div>
+<h3><p>It is perhaps most popularly known for its Stand phenomenon; the Stardust Crusaders arc and its characters Dio Brando/DIO and Jotaro Kujo; the expressive rendition of its proud,
+ glamorous personalities; and its hundreds of nominal references to Western popular music.<strong> There are currently six seasons on the show, with the last one coming out at the end of 2021.</strong></p></h3>
+<h2><em>Storyline</em></h2>
+<h3><p><strong>JoJo’s Bizarre Adventure</strong> is the story of the Joestar family, starting with Jonathan, a mild mannered Englishman who strikes up a rivalry with Dio Brando, his adopted brother. Because of a cursed mask, Dio becomes a powerful vampire, and Jonathan swears to stop him. After learning a fighting move called the “Ripple,” which allows Jonathan to kill vampires by punching the sun into them, he goes on a quest to defeat Dio for good. How does this already weird concept get weirder, you ask? Well, you’re in for a ride. 
+Each arc of the manga and anime follows the life of another member of the Joestar family, tracing their adventures through the generations. After Jonathan comes his grandson Joseph, who must defeat the vampiric Pillar Men, and then his grandson Jotaro Kujo, who develops a Stand and goes on an international trip to finally kill Dio. Each of the eight arcs of the series takes a new Joestar descendent on a dramatic new quest, each one exploring a new and more inventive setting and genre of storytelling.</p></h3>
+
+<h2>Useful Links</h2>
+<a class="btn btn-danger btn-lg btn-block" role="button" href="https://jojo.fandom.com/wiki/JoJo%27s_Bizarre_Adventure" target="_blank"> JJBA's Wiki </a>
+<a class="btn btn-danger btn-lg btn-block" role="button" href="https://jut.su/jojo-bizarre-adventure/" target="_blank"> Watch JJBA </a>
+<a class="btn btn-danger btn-lg btn-block" role="button" href="https://mangalib.me/phantom-blood?section=info" target="_blank"> Read JJBA </a>
+<a class="btn btn-danger btn-lg btn-block" role="button" href="/">Back <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+  <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1z"/>
+</svg></a>
+</div>
+<script>
+function soundClick() {
+  var audio = new Audio(); 
+  audio.src = 'mtrls/yyd.mp3'; 
+  audio.autoplay = true; 
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>$(".strln").on('click', function(){
+  $(this).slideUp(2000);
+});</script>
+</body>
+</html>
