@@ -4,9 +4,12 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 
-const {createServer} = require('http')
+//const {createServer} = require('http')
 
-const port = 5000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 5000;
+}
 
 /* for to validate and authentication*/
 const passport = require('passport')
@@ -256,11 +259,27 @@ app.delete('/logout', (req, res) => {
   res.redirect('/login')
 })
 
-mongoose.connect('mongodb+srv://Aveliya:87071153500Zoro@cluster0.4iyrg.mongodb.net/console?retryWrites=true&w=majority', {
+/*mongoose.connect('mongodb+srv://Aveliya:87071153500Zoro@cluster0.4iyrg.mongodb.net/console?retryWrites=true&w=majority', {
   useNewUrlParser: true,
 }).then(() => console.log('Rise...omurice'))
-  .catch(e => console.log(e))
+  .catch(e => console.log(e))*/
 
 //app.listen(port) } } )
-const server = createServer(app)
-server.listen(port, () => console.log('server is up.'))
+/*const server = createServer(app)
+server.listen(port, () => console.log('server is up.'))*/
+
+async function start() {
+  try {
+    await mongoose.connect(
+        'mongodb+srv://Aveliya:87071153500Zoro@cluster0.4iyrg.mongodb.net/console?retryWrites=true&w=majority',
+        {
+          useNewUrlParser: true
+        }
+    )
+    app.listen(port, ()=>console.log('app is up.'))
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+start()
