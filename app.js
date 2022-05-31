@@ -165,9 +165,6 @@ app.post('/adminPanel', async function (req, res) {
   res.render('adminPanel.ejs', {allUsers, sortOption})
 })
 ///---Authenticated or not???---///
-/*app.get('/', checkAuthenticated, (req, res) => {
-    res.render('greeting.ejs', { name: req.user.name })
-})*/
 app.get('/logout', checkAuthenticated, (req, res) => {
   console.log(req.user.isAdmin)
   res.render("greeting.ejs", {name: req.user.name, user: req.user})//GO TO PROFILE!!!! NOT MAIN
@@ -258,38 +255,6 @@ app.delete('/logout', (req, res) => {
   req.logOut()
   res.redirect('/login')
 })
-
-//MongoDB
-/*require('mongoose');
-const mongodb = require("mongodb");
-require ("express");
-let mongoClient = new mongodb.MongoClient('mongodb://localhost:27017/', {
-    useUnifiedTopology: true
-});
-
-function err() {
-
-}
-mongoClient.connect(async function (error, mongo ){
-    if(!error){
-        let db = mongo.db('console_ad');
-        let coll = db.collection ('users');
-        let res = await coll.find({adr: {country:'Kazakhstan',city:'Nur-Sultan',}}).toArray()
-        if(res != null){
-            console.log(res)
-        }
-        else{
-            console.error(err)
-        }
-    }
-    else{
-        console.error(err);
-
-        mongoClient.connect(async function(error) {
-            mongoClient.connect(async function(error, mongo) {
-
-    });
-});*/
 
 mongoose.connect('mongodb+srv://Aveliya:87071153500Zoro@cluster0.4iyrg.mongodb.net/console?retryWrites=true&w=majority', {
   useNewUrlParser: true,

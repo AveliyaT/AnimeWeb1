@@ -9,13 +9,13 @@
 
 </head>
 <style>
-  .hide {
-    display: none !important;
-  }
+    .hide {
+        display: none !important;
+    }
 </style>
 <body>
 <%- include('header'); -%>
-<link href="/css/adminp.css" rel="stylesheet" type="text/css">
+<!--<link href="/css/adminp.css" rel="stylesheet" type="text/css">-->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <div class="overflow-x-auto">
     <table class="table table-zebra w-full">
@@ -31,6 +31,7 @@
         </tr>
         </thead>
         <tbody>
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet" type="text/css"/>
         <% for(var i = 0; i < allUsers.length; i++) { %>
             <tr>
                 <th><%= i + 1 %></th>
@@ -92,6 +93,8 @@
     </form>
 </div>
 <label for="my-modal" class="btn modal-button">Add new user</label>
+
+<label for="my-modal" class="btn modal-button">Add new animeЫ</label>
 <input type="checkbox" id="my-modal-3" class="modal-toggle"/>
 
 <!-- Put this part before </body> tag -->
@@ -125,36 +128,37 @@
                 <br>
                 <button class="btn">Register</button>
             </div>
+
         </form>
     </div>
 </div>
 <script>
-  let allUsersJS = '<%- JSON.stringify(allUsers) %>'
-  const id2 = document.querySelector('#id2')
-  const name2 = document.querySelector('#name2')
-  const email2 = document.querySelector('#email2')
-  const city2 = document.querySelector('#city2')
-  const editLabels = document.querySelector('.editLabels')
-  const modal1 = document.querySelector('.modal1')
-  function closeIt() {
-    modal1.classList.toggle('hide')
-  }
-  const show = (id) => {
-    console.log(id.value)
-    console.log(JSON.parse(allUsersJS))
-    const concreteUser = JSON.parse(allUsersJS).find(allUser => {
-      if (String(allUser._id) == String(id.value)){
-        return true
-      }
-      return false
-    })
-    id2.value = concreteUser._id
-    name2.value = concreteUser.name
-    email2.value = concreteUser.email
-    city2.value = concreteUser.city
-    modal1.classList.toggle('hide')
+    let allUsersJS = '<%- JSON.stringify(allUsers) %>'
+    const id2 = document.querySelector('#id2')
+    const name2 = document.querySelector('#name2')
+    const email2 = document.querySelector('#email2')
+    const city2 = document.querySelector('#city2')
+    const editLabels = document.querySelector('.editLabels')
+    const modal1 = document.querySelector('.modal1')
+    function closeIt() {
+        modal1.classList.toggle('hide')
+    }
+    const show = (id) => {
+        console.log(id.value)
+        console.log(JSON.parse(allUsersJS))
+        const concreteUser = JSON.parse(allUsersJS).find(allUser => {
+            if (String(allUser._id) == String(id.value)){
+                return true
+            }
+            return false
+        })
+        id2.value = concreteUser._id
+        name2.value = concreteUser.name
+        email2.value = concreteUser.email
+        city2.value = concreteUser.city
+        modal1.classList.toggle('hide')
 
-  }
+    }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 </body>

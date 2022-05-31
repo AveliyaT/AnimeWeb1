@@ -22,8 +22,8 @@ h2 {
 h1 {
   margin: 0;
   padding: 20px 0;
-  color: #D12326;
-  text-shadow: 3px 3px 1px white;
+  color: whitesmoke;
+  text-shadow: 3px 3px 1px black;
 }
 img {
   display: block;
@@ -31,13 +31,14 @@ img {
   text-align: center;
 }
 body {
-  background-color: #9D5284;
+  background-color: #3a3a3a;
 }
 .inf{
   width: 900px;
   margin: 0 auto;
-  background-color: #EF9ED5;
+  background-color: #ffb8c6;
   padding: 0 20px 20px 20px;
+  border: 5px solid black;
  
 }
 /*a:link {
